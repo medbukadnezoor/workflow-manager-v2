@@ -1,0 +1,2 @@
+exit=1
+Usage: project-add-root /absolute/path/to/folder

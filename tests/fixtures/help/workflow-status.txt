@@ -1,0 +1,10 @@
+usage: workflow status [-h] [--path PATH] [--json]
+
+Show the repo-owned v2 status view, including the health overview plus the
+detailed manifest, mirror-lock/shim, memory, continuity-state, roots, role-
+contract, and command/help/docs consistency sections.
+
+options:
+  -h, --help   show this help message and exit
+  --path PATH  Target repo path; defaults to the current directory
+  --json       Emit machine-readable JSON instead of text

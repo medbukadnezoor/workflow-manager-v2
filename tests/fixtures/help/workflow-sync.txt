@@ -1,0 +1,10 @@
+usage: workflow sync [-h] [--path PATH] [--dry-run] [--force]
+
+Generate checksum-locked tool shims from the canonical `AGENTS.md` contract
+without silently overwriting managed drift.
+
+options:
+  -h, --help   show this help message and exit
+  --path PATH  Target repo path; defaults to the current directory
+  --dry-run
+  --force

@@ -1,0 +1,9 @@
+usage: workflow roots [-h] [--format {text,shell,json}] [--validate]
+
+Inspect workspace roots from the repo-owned config at `.workflow/roots.json`
+and validate whether the configured default roots are safe to use.
+
+options:
+  -h, --help            show this help message and exit
+  --format {text,shell,json}
+  --validate

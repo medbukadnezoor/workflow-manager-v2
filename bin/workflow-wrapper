@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+WORKFLOW_WRAPPER_SOURCE="${${(%):-%x}:A}"
+WORKFLOW_WRAPPER_HOME="${WORKFLOW_WRAPPER_SOURCE:h:h}"
+source "$WORKFLOW_WRAPPER_HOME/scripts/workflow.sh"
+cmd=$(basename "$0")
+"$cmd" "$@"

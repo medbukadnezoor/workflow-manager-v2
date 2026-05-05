@@ -1,0 +1,9 @@
+exit=0
+
+To permanently add a new root, edit:
+<WORKFLOW_MANAGER_HOME>/.workflow/roots.json
+
+Add your path to the roots array, then validate with:
+workflow roots --validate
+
+This repo does not edit shell startup files automatically.

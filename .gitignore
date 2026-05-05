@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Local-only environment secrets
+.env
+.env.*
+!.env.example
+
+# Local editor and OS noise
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local workflow evidence
+*.bak*
+*.tmp
+

@@ -1,0 +1,19 @@
+usage: workflow [-h]
+                {init,sync,status,doctor,roots,hermes,open,list,close,save} ...
+
+positional arguments:
+  {init,sync,status,doctor,roots,hermes,open,list,close,save}
+    init                Initialize the v2 scaffold
+    sync                Generate checksum-locked tool shims from AGENTS.md
+    status              Show a human-readable repo summary
+    doctor              Validate the v2 scaffold
+    roots               Inspect workspace roots from repo-owned config
+    hermes              Run Hermes inventory, preflight, analysis, preview,
+                        and the explicit no-content connectivity gate
+    open                Resolve or create a project across configured roots
+    list                List projects across configured roots
+    close               Show close-out guidance for the current repo
+    save                Append a session marker for the current repo
+
+options:
+  -h, --help            show this help message and exit

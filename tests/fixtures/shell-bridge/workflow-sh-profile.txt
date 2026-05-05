@@ -1,0 +1,43 @@
+script: scripts/workflow.sh
+
+wrapper functions:
+- workflow
+- project-open
+- project-close
+- project-save
+- project-list
+- project-status
+- project-add-root
+- project-init
+- project-sync
+- workflow-doctor
+
+required lines:
+- workflow-cli-dispatch: command python3 "$WORKFLOW_MANAGER_HOME/bin/workflow" "$@"
+- roots-source-of-truth: WORKFLOW_ROOT_SOURCE="$WORKFLOW_MANAGER_HOME/.workflow/roots.json"
+- temporary-workflow-roots-override: WORKFLOW_ROOT_SOURCE="temporary WORKFLOW_ROOTS override"
+- cli-roots-shell-export: roots_payload=$(workflow roots --format shell) || return 1
+- project-open-shell-cd: cd "$WORKFLOW_OPEN_PATH" || return 1
+- project-open-cli-status: workflow status
+- project-close-shell-open: _workflow_open_file "$WORKFLOW_CLOSE_OPEN_PATH"
+- project-list-cli-delegation: workflow list "${WORKFLOW_ROOT_ARGS[@]}"
+- project-status-cli-delegation: workflow status "$@"
+- project-init-cli-delegation: workflow init "$@"
+- project-sync-cli-delegation: workflow sync "$@"
+- workflow-doctor-cli-delegation: workflow doctor "$@"
+- project-add-root-roots-json-guidance: echo "$WORKFLOW_MANAGER_HOME/.workflow/roots.json"
+- project-add-root-validate-guidance: echo "workflow roots --validate"
+- project-add-root-no-shell-startup-edits: echo "This repo does not edit shell startup files automatically."
+
+forbidden markers:
+- hardcoded-user-project-root: absent
+- hardcoded-user-research-root: absent
+- shell-startup-edits: absent
+- live-scaffold-template: absent
+- edit-workflow-sh-as-primary-roots-path: absent
+- hermes-implemented-claim: absent
+- dashscope-implemented-claim: absent
+- qwen-implemented-claim: absent
+- graphify-implemented-claim: absent
+- spec-kit-complete-claim: absent
+- default-workflow-roots-assignment: absent

@@ -1,0 +1,10 @@
+usage: workflow close [-h] [--path PATH] [--format {text,shell}]
+
+Show close-out guidance for the current repo. For v2 repos the primary
+continuity targets live under `.specify/state/`, while `.ai/*` remains
+preserved legacy/coexistence state.
+
+options:
+  -h, --help            show this help message and exit
+  --path PATH           Target repo path; defaults to the current directory
+  --format {text,shell}

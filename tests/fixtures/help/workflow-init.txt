@@ -1,0 +1,15 @@
+usage: workflow init [-h] [--path PATH] [--dry-run] [--force] [--skip-sync]
+                     [--adopt-manual]
+
+Initialize the repo-owned v2 scaffold in the target directory without deleting
+preserved legacy `.ai/` state.
+
+options:
+  -h, --help      show this help message and exit
+  --path PATH     Target repo path; defaults to the current directory
+  --dry-run
+  --force
+  --skip-sync
+  --adopt-manual  Preserve existing manual AGENTS.md and .specify/* files
+                  while creating missing workflow metadata, managed role
+                  pointer, generated shims, and mirror lock.

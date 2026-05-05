@@ -1,0 +1,9 @@
+usage: workflow save [-h] [--path PATH]
+
+Append a session marker for the current repo. For v2 repos the primary log is
+`.specify/state/session.log.md`, with legacy `.ai/logs/session.log` used only
+for coexistence when present.
+
+options:
+  -h, --help   show this help message and exit
+  --path PATH  Target repo path; defaults to the current directory

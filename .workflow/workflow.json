@@ -1,0 +1,51 @@
+{
+  "base": "workflow-manager-safe-slice",
+  "canonical_contract": "AGENTS.md",
+  "features": {
+    "graphify": false,
+    "llm_analysis": false,
+    "memory_bank_compat": false,
+    "nested_workspaces": false
+  },
+  "generated_claude_adapters": [
+    ".claude/agents/architect.md",
+    ".claude/agents/coder.md",
+    ".claude/agents/verifier.md"
+  ],
+  "generated_droid_adapters": [
+    ".factory/droids/architect.md",
+    ".factory/droids/coder.md",
+    ".factory/droids/verifier.md"
+  ],
+  "generated_gemini_adapters": [
+    ".gemini/agents/research-orchestrator.md"
+  ],
+  "generated_opencode_adapters": [
+    ".opencode/agents/architect.md",
+    ".opencode/agents/coder.md",
+    ".opencode/agents/verifier.md"
+  ],
+  "generated_role_shims": [],
+  "generated_shims": [
+    "CLAUDE.md",
+    "GEMINI.md"
+  ],
+  "hermes": {
+    "last_run": null,
+    "mode": "migration-only",
+    "model": null,
+    "provider": null
+  },
+  "legacy_root": ".ai",
+  "memory_root": ".specify/memory",
+  "migration": {
+    "branch": null,
+    "legacy_preserved": false,
+    "phase": "milestone-1-foundation",
+    "started_at": "2026-05-05T18:34:11+07:00",
+    "status": "v2"
+  },
+  "scaffold": "workflow-manager-v2",
+  "schema_version": "2.0.0",
+  "state_root": ".specify/state"
+}

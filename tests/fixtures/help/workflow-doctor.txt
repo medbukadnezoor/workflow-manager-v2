@@ -1,0 +1,10 @@
+usage: workflow doctor [-h] [--path PATH] [--write-report] [--json]
+
+Validate the repo-owned v2 scaffold and health surfaces without auto-repair.
+Use `workflow sync` explicitly when mirror-lock/shim drift needs repair.
+
+options:
+  -h, --help      show this help message and exit
+  --path PATH     Target repo path; defaults to the current directory
+  --write-report
+  --json          Emit machine-readable JSON instead of text

@@ -1,0 +1,10 @@
+usage: workflow list [-h] [--roots ROOTS]
+
+List shallow project classifications across the repo-owned workspace roots.
+Use `--roots` only to override the repo-owned workspace roots for this
+command.
+
+options:
+  -h, --help     show this help message and exit
+  --roots ROOTS  Override the repo-owned workspace roots for this command
+                 (repeatable)

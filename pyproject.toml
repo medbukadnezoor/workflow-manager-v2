@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "workflow-manager-v2"
+version = "0.1.0"
+description = "Local-first continuity and workflow manager for multi-agent coding projects."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Workflow Manager v2 contributors"}]
+keywords = ["agents", "workflow", "continuity", "automation", "cli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+]
+
+[project.scripts]
+workflow = "workflow_manager.cli:main"
+
+[tool.setuptools]
+packages = ["workflow_manager"]
+

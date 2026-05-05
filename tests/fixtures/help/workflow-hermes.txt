@@ -1,0 +1,22 @@
+usage: workflow hermes [-h]
+                       {inventory,preflight,analyze,qwen-preview,qwen-connectivity} ...
+
+Run deterministic read-only dry-run inventory, preflight, bounded analysis,
+and offline Qwen request/prompt preview, or the explicit operator-gated no-
+content DashScope connectivity probe. Live response parsing, migration writes,
+report writing, Qwen/DashScope analysis, and Graphify remain deferred.
+
+positional arguments:
+  {inventory,preflight,analyze,qwen-preview,qwen-connectivity}
+    inventory           Classify repos across configured roots without writing
+    preflight           Evaluate shallow Hermes readiness facts without
+                        writing
+    analyze             Summarize deterministic preflight facts without
+                        writing
+    qwen-preview        Preview the offline Qwen request/prompt contract
+                        without writing
+    qwen-connectivity   Run the explicit operator-gated no-content DashScope
+                        connectivity probe
+
+options:
+  -h, --help            show this help message and exit

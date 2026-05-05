@@ -1,0 +1,19 @@
+usage: workflow open [-h] [--roots ROOTS] [--create] [--root ROOT] [--force]
+                     [--skip-sync] [--format {text,shell}]
+                     name
+
+Resolve or create a project across repo-owned workspace roots. Use `--roots`
+only to override the repo-owned workspace roots for this command.
+
+positional arguments:
+  name                  Project directory name
+
+options:
+  -h, --help            show this help message and exit
+  --roots ROOTS         Override the repo-owned workspace roots for this
+                        command (repeatable)
+  --create              Create the project if it does not exist
+  --root ROOT           Creation root for a missing project
+  --force               Forwarded to `workflow init` during creation
+  --skip-sync           Forwarded to `workflow init` during creation
+  --format {text,shell}
