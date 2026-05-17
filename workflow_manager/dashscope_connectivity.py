@@ -5,6 +5,7 @@ from dataclasses import dataclass
 from pathlib import Path
 import socket
 import ssl
+from typing import Union
 from urllib import error as urllib_error
 from urllib import request as urllib_request
 
@@ -345,7 +346,7 @@ class DashScopeConnectivityProbeResult:
 
 DashScopeConnectivityTransport = Callable[
     [DashScopeConnectivityProbeRequest, Path, str],
-    DashScopeConnectivityTransportResult | dict[str, object],
+    Union[DashScopeConnectivityTransportResult, dict[str, object]],
 ]
 
 
